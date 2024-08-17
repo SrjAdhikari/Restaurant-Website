@@ -1,0 +1,46 @@
+/* Container for the awards section */
+.app__laurels_awards {
+    display: flex;                  /* Use flexbox for layout */
+    justify-content: flex-start;    /* Align items to the start of the container */
+    align-items: center;            /* Align items vertically centered */
+    flex-wrap: wrap;                /* Allow items to wrap to the next line */
+    margin-top: 3rem;               /* Space above the awards section */
+}
+
+/* Styling for individual award cards */
+.app__laurels_awards-card {
+    flex: 1;                        /* Allow the card to grow and fill available space */
+    display: flex;                  /* Use flexbox for card layout */
+    justify-content: flex-start;    /* Align card content to the start */
+    align-items: flex-start;        /* Align items to the start */
+    min-width: 230px;               /* Minimum width for each card */
+    margin: 1rem;                   /* Space around each card */
+}
+
+/* Styling for the image inside the award card */
+.app__laurels_awards-card img {
+    width: 50px;                    /* Set the width of the image */
+    height: 50px;                   /* Set the height of the image */
+}
+
+/* Container for the content inside each award card */
+.app__laurels_awards-card_content {
+    display: flex;                  /* Use flexbox for content layout */
+    flex-direction: column;         /* Stack content vertically */
+    margin-left: 1rem;              /* Space between the image and the content */
+}
+
+/* Media query for screens larger than 1900px */
+@media screen and (min-width: 1900px) {
+    .app__laurels_awards-card {
+        min-width: 390px;           /* Increase minimum width of the card */
+    }
+}
+
+/* Media query for screens smaller than or equal to 450px */
+@media screen and (max-width: 450px) {
+    .app__laurels_awards-card {
+        min-width: 100%;            /* Allow card to take full width of the container */
+        margin: 1rem 0;             /* Adjust margin for small screens */
+    }
+}
