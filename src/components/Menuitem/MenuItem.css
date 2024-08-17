@@ -1,0 +1,40 @@
+/* The container for a single menu item, arranged in a column layout */
+.app__menuitem {
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The header section of the menu item, containing the name and price, aligned horizontally */
+.app__menuitem-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* The subheading or description section of the menu item, with a small margin at the top */
+.app__menuitem-sub {
+    width: 100%;
+    margin-top: 0.2rem;
+}
+
+/* The name of the menu item, occupying available space */
+.app__menuitem-name {
+    flex: 1;
+}
+
+/* A decorative dash between the name and price, with a golden color */
+.app__menuitem-dash {
+    width: 90px;
+    height: 1px;
+    background: var(--color-golden);
+    margin: 0 1rem;
+}
+
+/* The price section of the menu item, aligned to the right */
+.app__menuitem-price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
