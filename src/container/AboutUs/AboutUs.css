@@ -1,0 +1,90 @@
+/* Container for the AboutUs section */
+.app__aboutus {
+    position: relative;
+}
+
+/* Overlay that sits behind the content */
+.app__aboutus-overlay {
+    position: absolute;     /* Overlay covers the whole section */
+    inset: 0;               /* Stretch the overlay to fill the container */
+}
+
+.app__aboutus-overlay img {
+    width: 391px;           /* Width of the overlay image */
+    height: 415px;          /* Height of the overlay image */
+    z-index: 0;             /* Ensure the overlay image is behind the content */
+}
+
+/* Container for the main content within the AboutUs section */
+.app__aboutus-content {
+    width: 100%;            /* Full width of the container */
+    z-index: 2;             /* Ensure content is above the overlay */
+}
+
+/* Styling for the 'About' section content */
+.app__aboutus-content_about {
+    flex: 1;                        /* Takes up one portion of the available space */
+    display: flex;                  /* Flexbox layout */
+    justify-content: flex-end;      /* Align items to the end of the container */
+    align-items: flex-end;          /* Align items to the end of the container */
+    flex-direction: column;         /* Stack items vertically */
+    text-align: right;              /* Align text to the right */
+}
+
+/* Styling for the knife image section */
+.app__aboutus-content_knife {
+    margin: 2rem 4rem;              /* Margins around the knife image */
+}
+
+.app__aboutus-content_knife img {
+    height: 910px;                  /* Height of the knife image */
+}
+
+/* Styling for the 'Our History' section content */
+.app__aboutus-content_history {
+    flex: 1;                        /* Takes up one portion of the available space */
+    display: flex;                  /* Flexbox layout */
+    justify-content: flex-start;    /* Align items to the start of the container */
+    align-items: flex-start;        /* Align items to the start of the container */
+    flex-direction: column;         /* Stack items vertically */
+    text-align: left;               /* Align text to the left */
+}
+
+/* Styling for paragraphs within both 'About' and 'Our History' sections */
+.app__aboutus-content_history p,
+.app__aboutus-content_about p {
+    margin: 2rem 0;                 /* Margins around the paragraphs */
+    color: var(--color-grey);       /* Color of the text */
+}
+
+/* Responsive styling for larger screens */
+@media screen and (max-width: 2000px) {
+    .app__aboutus-content_knife img {
+        height: 1110px;             /* Adjusted height for larger screens */
+    }
+
+    .app__aboutus-content_history p,
+    .app__aboutus-content_about p {
+        margin: 4rem 0; /* Adjusted margin for larger screens */
+        color: var(--color-grey);   /* Ensure text color consistency */
+    }
+}
+
+/* Responsive styling for medium screens */
+@media screen and (max-width: 900px) {
+    .app__aboutus-content {
+        flex-direction: column;     /* Stack content sections vertically */
+    }
+
+    .app__aboutus-content_knife {
+        margin: 4rem 0;             /* Adjusted margin for smaller screens */
+    }
+}
+
+/* Responsive styling for small screens */
+@media screen and (max-width: 650px) {
+    .app__aboutus-overlay img {
+        width: 80%;                 /* Adjusted width of the overlay image */
+        height: 320px;              /* Adjusted height of the overlay image */
+    }
+}
