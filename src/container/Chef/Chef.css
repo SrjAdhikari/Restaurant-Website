@@ -1,0 +1,50 @@
+.app__chef-content {
+    display: flex;              /* Flexbox layout */
+    flex-direction: column;     /* Arrange items vertically */
+    width: 100%;                /* Full width of the container */
+    margin-top: 5rem;           /* Top margin for spacing */
+}
+
+.app__checf-content_quote {
+    display: flex;                  /* Flexbox layout */
+    justify-content: flex-start;    /* Align items to the start of the container */
+    align-items: flex-end;          /* Align items to the bottom of the container */
+}
+
+.app__checf-content_quote img {
+    width: 47px;                    /* Width of the quote image */
+    height: 40px;                   /* Height of the quote image */
+    margin: 0 1rem 1rem 0;          /* Margin around the image, spacing it from the text */
+}
+
+.app__chef-sign {
+    width: 100%;                    /* Full width of the container */
+    margin-top: 3rem;               /* Top margin for spacing */
+}
+
+.app__chef-sign p:first-child {
+    font-family: var(--font-base);      /* Base font family */
+    font-weight: 400;                   /* Normal font weight */
+    font-size: 32px;                    /* Font size */
+    line-height: 41px;                  /* Line height */
+    letter-spacing: 0.04em;             /* Spacing between letters */
+    text-transform: capitalize;         /* Capitalize the first letter of each word */
+    color: var(--color-golden);         /* Golden text color */
+}
+
+.app__chef-sign img {
+    width: 250px;                       /* Width of the signature image */
+    margin-top: 3rem;                   /* Top margin for spacing */
+}
+
+@media screen and (max-width: 2000px) {
+    .app__chef-sign img {
+        width: 370px;                    /* Increase width of the signature image for large screens */
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .app__chef-sign img {
+        width: 80%;                     /* Responsive width adjustment for small screens */
+    }
+}
