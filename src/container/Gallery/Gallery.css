@@ -1,0 +1,147 @@
+.app__gallery {
+    display: flex;                      /* Flexbox layout for the gallery */
+    flex-direction: row;                /* Aligns items in a row */
+    background: var(--color-black);     /* Sets background color */
+    padding: 4rem 0 4rem 6rem;          /* Padding around the gallery */
+}
+
+.app__gallery-content {
+    flex: 1;                            /* Takes up one portion of available space */
+    display: flex;                      /* Flexbox layout for content */
+    justify-content: center;            /* Centers content horizontally */
+    align-items: flex-start;            /* Aligns content to the start vertically */
+    flex-direction: column;             /* Stacks content vertically */
+    min-width: 500px;                   /* Minimum width of content */
+    padding-right: 2rem;                /* Padding on the right */
+}
+
+.app__gallery-content button {
+    margin-top: 1rem;                   /* Spacing above the button */
+}
+
+.app__gallery-images {
+    flex: 1;                            /* Takes up one portion of available space */
+    display: flex;                      /* Flexbox layout for images */
+    flex-direction: row;                /* Aligns images in a row */
+    max-width: 50%;                     /* Maximum width of images container */
+    position: relative;                 /* Positions the container relative to itself */
+}
+
+.app__gallery-images_container {
+    display: flex;                      /* Flexbox layout for image container */
+    flex-direction: row;                /* Aligns images in a row */
+    width: max-content;                 /* Container takes up as much space as content */
+    overflow-x: scroll;                 /* Horizontal scrolling for overflow */
+    text-overflow: none;                /* No text overflow effect */
+    scrollbar-width: none;              /* Hides the scrollbar */
+}
+
+.app__gallery-images_container::-webkit-scrollbar {
+    display: none;                      /* Hides scrollbar in Webkit browsers */
+}
+
+.app__gallery-images_card {
+    position: relative;                 /* Positions the card relative to itself */
+    min-width: 301px;                   /* Minimum width of the card */
+    height: 447px;                      /* Height of the card */
+    margin-right: 2rem;                 /* Space to the right of the card */
+}
+
+.gallery__image-icon {
+    position: absolute;                 /* Positions the icon absolutely within the card */
+    color: #fff;                      /* White color for the icon */
+    font-size: 2rem;                    /* Font size for the icon */
+    opacity: 0.5;                       /* Initial opacity for the icon */
+    transition: 0.5s ease;              /* Smooth transition for hover effect */
+    cursor: pointer;                    /* Changes cursor to pointer on hover */
+}
+
+.app__gallery-images_card img {
+    width: 100%;                        /* Full width for the image */
+    height: 100%;                       /* Full height for the image */
+    object-fit: cover;                  /* Covers the card area with the image */
+    opacity: 1;                         /* Initial opacity for the image */
+    transition: 0.5s ease;              /* Smooth transition for hover effect */
+}
+
+.app__gallery-images_card:hover img {
+    opacity: 0.35;                      /* Reduces opacity on hover */
+}
+
+.app__gallery-images_card:hover .gallery__image-icon {
+    opacity: 1;                         /* Increases opacity of icon on hover */
+}
+
+.app__gallery-images_arrows {
+    width: 100%;                        /* Full width for the arrows container */
+    display: flex;                      /* Flexbox layout for the arrows */
+    justify-content: space-between;     /* Space between arrows */
+    align-items: center;                /* Aligns arrows vertically in the center */
+    padding: 0 1rem;                    /* Padding around the arrows */
+    position: absolute;                 /* Positions arrows absolutely within the gallery */
+    bottom: 5%;                         /* Positions the arrows 5% from the bottom */
+}
+
+.gallery__arrow-icon {
+    color: var(--color-golden);             /* Golden color for the arrow */
+    font-size: 2rem;                        /* Font size for the arrow */
+    cursor: pointer;                        /* Changes cursor to pointer on hover */
+    background-color: var(--color-black);   /* Black background for the arrow */
+    border-radius: 5px;                     /* Rounds the corners of the arrow */
+}
+
+.gallery__arrow-icon:hover {
+    color: var(--color-white);              /* White color for the arrow on hover */
+}
+
+/* Styles for screens wider than 2000px */
+@media screen and (min-width: 2000px) {
+    .app__gallery-content button {
+        margin-top: 2rem;                   /* Increases space above the button */
+    }
+
+    .app__gallery-content {
+        min-width: 1000px;                  /* Increases minimum width of the content */
+        padding-right: 4rem;                /* Increases padding on the right */
+    }
+
+    .app__gallery-images_card {
+        min-width: 400px;                   /* Increases minimum width of the card */
+        height: 547px;                      /* Increases height of the card */
+    }
+}
+
+/* Styles for screens narrower than 1150px */
+@media screen and (max-width: 1150px) {
+    .app__gallery {
+        flex-direction: column;             /* Stacks gallery items vertically */
+    }
+
+    .app__gallery-images {
+        max-width: 100%;                    /* Sets images container to full width */
+        margin: 5rem 0;                     /* Adds vertical margin around the images */
+    }
+}
+
+/* Styles for screens narrower than 850px */
+@media screen and (max-width: 850px) {
+    .app__gallery {
+        padding: 4rem 0 4rem 4rem;          /* Reduces left padding */
+    }
+}
+
+/* Styles for screens narrower than 650px */
+@media screen and (max-width: 650px) {
+    .app__gallery {
+        padding: 4rem 0 4rem 2rem;          /* Further reduces left padding */
+    }  
+    
+    .app__gallery-content {
+        min-width: 100%;                    /* Sets content to full width */
+    }
+
+    .app__gallery-images_card {
+        min-width: 240px;                   /* Reduces minimum width of the card */
+        height: 320px;                      /* Reduces height of the card */
+    }
+}
