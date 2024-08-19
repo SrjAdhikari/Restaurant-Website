@@ -1,0 +1,104 @@
+.app__footer {
+    width: 100%;
+    position: relative;     /* Ensures footer is positioned relative to its container */
+    z-index: 1;             /* Places footer above other elements if necessary */
+
+    display: flex;
+    justify-content: flex-start;    /* Aligns items to the start of the container */
+    align-items: center;            /* Centers items vertically */
+    flex-direction: column;         /* Stacks child elements vertically */
+
+    background: var(--color-black);     /* Black background for the footer */
+    padding-top: 0;                     /* No padding at the top */
+}
+
+.app__footer-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;     /* Distributes space between child elements */
+    align-items: flex-start;            /* Aligns child elements to the top */
+
+    margin-top: 5rem;                   /* Space above the footer links section */
+    padding: 0 2rem;                    /* Horizontal padding inside the footer links */
+}
+
+.app__footer-links_contact,
+.app__footer-links_logo,
+.app__footer-links_work {
+    flex: 1;                            /* Allows sections to grow and shrink equally */
+    margin: 1rem;                       /* Margin around each section */
+    text-align: center;                 /* Centers text inside each section */
+}
+
+.app__footer-links_logo img:first-child {
+    width: 210px;                       /* Width of the logo image */
+    margin-bottom: 0.75rem;             /* Space below the logo image */
+}
+
+.app__footer-links_work p:nth-child(2n + 1) {
+    margin-bottom: 1rem;                /* Margin below odd-numbered paragraphs */
+}
+
+.app__footer-links_icons {
+    margin-top: 0.5rem;                 /* Space above the icons */
+}
+
+.app__footer-links_icons svg {
+    color: var(--color-white);          /* Default color of icons */
+    margin: 0.5rem;                     /* Space around each icon */
+    font-size: 24px;                    /* Size of the icons */
+    cursor: pointer;                    /* Pointer cursor on hover */
+}
+
+.app__footer-links_icons svg:hover {
+    color: var(--color-golden);         /* Color change on hover */
+}
+
+.app__footer-headtext {
+    font-family: var(--font-base);      /* Font family for the heading text */
+    color: var(--color-white);          /* White text color */
+    font-weight: 400;                   /* Font weight */
+    letter-spacing: 0.04em;             /* Spacing between letters */
+    text-transform: capitalize;         /* Capitalizes the first letter of each word */
+    font-size: 32px;                    /* Font size */
+    line-height: 41.6px;                /* Line height */
+    margin-bottom: 1rem;                /* Space below the heading */
+}
+
+.footer__copyright {
+    margin-top: 3rem;                   /* Space above the copyright section */
+}
+
+@media screen and (min-width: 2000px) {
+    .app__footer-headtext {
+        font-size: 51px;                /* Larger font size for very large screens */
+        line-height: 61.6px;            /* Larger line height for very large screens */
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .app__footer-links {
+        align-items: center;            /* Center-aligns items vertically on smaller screens */
+        flex-direction: column;         /* Stacks items vertically on smaller screens */
+        padding: 0;                     /* Removes padding */
+    }
+
+    .app__footer-links_contact,
+    .app__footer-links_logo,
+    .app__footer-links_work {
+        margin: 2rem 0;                 /* Adds vertical margin for spacing */
+        width: 100%;                    /* Ensures sections take up full width */
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__footer {
+        padding: 0 0 2rem 0;            /* Adds padding at the bottom on smaller screens */
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .app__footer-links_logo img:first-child {
+        width: 80%;                     /* Reduces logo image size on very small screens */
+    }
+}
