@@ -1,0 +1,71 @@
+/* Styles for the newsletter section */
+.app__newsletter {
+    padding: 2rem 4rem;                     /* Padding around the newsletter section */
+    border: 1px solid var(--color-golden);  /* Border with golden color */
+    background: var(--color-black);         /* Black background */
+}
+
+/* Center-aligned heading within the newsletter section */
+.app__newsletter-heading {
+    text-align: center;                     /* Center-align text */
+}
+
+/* Flex container for the input and button in the newsletter section */
+.app__newsletter-input {
+    flex-direction: row;                    /* Arrange input and button in a row */
+    margin-top: 3rem;                       /* Margin on top */
+}
+
+/* Styles for the input field in the newsletter section */
+.app__newsletter-input input {
+    width: 620px;                           /* Fixed width for the input field */
+    border: 1px solid var(--color-golden);  /* Golden border */
+    border-radius: 5px;                     /* Rounded corners */
+    font-size: 1rem;                        /* Font size for the input text */
+    font-family: var(--font-base);          /* Font family */
+    color: var(--color-white);              /* Text color */
+    margin-right: 2rem;                     /* Space between input and button */
+    padding: 0.75rem 1rem;                  /* Padding inside the input field */
+    background: var(--color-black);         /* Black background for the input field */
+}
+
+/* Styles for the button in the newsletter section */
+.app__newsletter-input button {
+    width: max-content;                     /* Width based on content */
+}
+
+/* Responsive styles for screens larger than 2000px */
+@media screen and (min-width: 2000px) {
+    .app__newsletter-input input {
+        font-size: 2rem;                    /* Larger font size for very large screens */
+    }
+}
+
+/* Responsive styles for screens smaller than 990px */
+@media screen and (max-width: 990px) {
+    .app__newsletter-input {
+        flex-direction: column;             /* Stack input and button vertically */
+        width: 100%;                        /* Full width of the container */
+    }
+
+    .app__newsletter-input input {
+        margin: 0 0 2rem 0;                 /* Remove right margin and add bottom margin */
+        width: 100%;                        /* Full width of the input field */
+    }
+}
+
+/* Responsive styles for screens smaller than 650px */
+@media screen and (max-width: 650px) {
+    .app__newsletter {
+        padding: 2rem 0;                    /* Reduced padding */
+        border: none;                       /* Remove border */
+    }
+}
+
+/* Responsive styles for screens smaller than 300px */
+@media screen and (max-width: 300px) {
+    .app__newsletter-heading h1 {
+        font-size: 32px;                    /* Smaller font size for very small screens */
+        line-height: 50px;                  /* Adjust line height */
+    }
+}
