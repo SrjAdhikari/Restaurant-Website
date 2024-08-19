@@ -1,0 +1,21 @@
+/* Container for the footer overlay */
+.app__footerOverlay {
+    width: 100%;        /* Full width of the parent element */
+    height: 100%;       /* Full height of the parent element */
+    z-index: -1;        /* Ensure the overlay is behind other content */
+    
+    display: flex;              /* Use flexbox for layout */
+    flex-direction: column;     /* Stack child elements vertically */
+    position: absolute;         /* Position absolutely within the parent */
+}
+
+/* Black background section of the footer overlay */
+.app__footerOverlay-black {
+    height: 25%;                        /* Cover 25% of the overlay height */
+    background: var(--color-black);     /* Black background color */
+}
+
+/* Image section of the footer overlay */
+.app__footerOverlay-img {
+    height: 75%;    /* Cover the remaining 75% of the overlay height */
+}
